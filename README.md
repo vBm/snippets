@@ -1,0 +1,1 @@
+Some of scripts i've wrote for personal use but decided to share 'em.
