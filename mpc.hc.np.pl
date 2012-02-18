@@ -1,4 +1,4 @@
-############ MPC-HC 0.1 - © 2012, vBm <vbm@omertabeyond.com> ###################
+############ MPC-HC 0.2 - © 2012, vBm <vbm@omertabeyond.com> ###################
 #!/usr/bin/perl
 
 use strict;
@@ -8,7 +8,7 @@ use LWP::UserAgent;
 
 #############################################################################
 
-my $version = "0.1";
+my $version = "0.2";
 Xchat::register("MPC-HC API", $version, "Displays MPC-HC Player Info!","");
 IRC::print('Loaded - MPC-HC API - Use: /np :: Setup: Open MPC-HC > Options -> Player -> Web interface -> listen on port');
 
@@ -19,11 +19,11 @@ Xchat::hook_command("np", "mpchc");
 #############################################################################
 
 sub mpchc {
-	my $browser		= LWP::UserAgent->new;					# Create A session!
+	my $browser		= LWP::UserAgent->new;			# Create A session!
 	my $url			= 'http://localhost:13579/info.html';	# HTML File Here!
-	$browser->timeout(3);									# How Long to Wait!
-	$browser->env_proxy;									# Proxy Mode!
-	my $response = $browser->get($url);						# Get Info!
+	$browser->timeout(3);						# How Long to Wait!
+	$browser->env_proxy;						# Proxy Mode!
+	my $response = $browser->get($url);				# Get Info!
 
 	#Report Back if its Wrong!
 	if ( !$response->is_success ) {
