@@ -40,7 +40,7 @@ sub mpchc {
 		$mpchcnp =~ s/<[^>]*>//g;
 		$mpchcnp =~ s/^\s+|\s+$//g;
 		$mpchcnp =~ s/&laquo;/\xab/g;
-		# Couldn't find proper way to replace it so i'm using plane hypen as separator ;x
+		# Couldn't find proper way to replace it so i'm using plain hypen as separator ;x
 		$mpchcnp =~ s/&bull;/\x2D/g;
 		$mpchcnp =~ s/&raquo;/\xbb/g;
 		Xchat::command("say $mpchcnp");
