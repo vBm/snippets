@@ -1,4 +1,4 @@
-############ MPC-HC 0.2 - © 2012, vBm <vbm@omertabeyond.com> ###################
+############ MPC-HC 0.3 - © 2012, vBm <vbm@omertabeyond.com> ###################
 #!/usr/bin/perl
 
 use strict;
@@ -8,7 +8,7 @@ use LWP::UserAgent;
 
 #############################################################################
 
-my $version = "0.2";
+my $version = "0.3";
 Xchat::register("MPC-HC API", $version, "Displays MPC-HC Player Info!","");
 Xchat::print('Loaded - MPC-HC API - Use: /np :: Setup: Open MPC-HC > Options -> Player -> Web interface -> listen on port');
 
