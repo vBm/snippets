@@ -5,7 +5,8 @@
 // @author      vBm <vbm@omertabeyond.com>
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1
+// @version     1.1
+// @date        06/02/2013
 // ==/UserScript==
 
 var showInfo = document.location.href.split('/');
@@ -21,5 +22,5 @@ subsbutton.setAttribute('class', 'btn watch-episode-button addic7ed');
 subsbutton.setAttribute('style', 'top:24px');
 subsbutton.textContent = 'Addic7ed subs';
 subsbutton.addEventListener('click', function() { window.open(subtitlesUrl) });
-var showInfoDiv = document.getElementsByClassName('column_2')[0]
+var showInfoDiv = document.getElementsByClassName('buttons')[0]
 showInfoDiv.appendChild(subsbutton);
