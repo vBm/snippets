@@ -5,8 +5,8 @@
 // @author      vBm <vbm@omertabeyond.com>
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1.1
-// @date        06/02/2013
+// @version     1.2
+// @date        11/03/2013
 // ==/UserScript==
 
 var showInfo = document.location.href.split('/');
@@ -18,7 +18,7 @@ var showInfoEpisodeName = document.getElementsByClassName('episode-title')[0].te
 var subtitlesUrl = 'http://www.addic7ed.com/serie/'+showInfoName+'/'+showInfoSeason+'/'+showInfoEpisode+'/'+showInfoEpisodeName;
 
 var subsbutton = document.createElement("a");
-subsbutton.setAttribute('class', 'btn watch-episode-button addic7ed');
+subsbutton.setAttribute('class', 'btn addic7ed');
 subsbutton.setAttribute('style', 'top:24px');
 subsbutton.textContent = 'Addic7ed subs';
 subsbutton.addEventListener('click', function() { window.open(subtitlesUrl) });
