@@ -3,24 +3,30 @@
 // @namespace   followshows
 // @description Link addic7ed subs
 // @author      vBm <vbm@omertabeyond.com>
+// @require     http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1.2
-// @date        11/03/2013
+// @version     1.3
+// @date        04/08/2013
 // ==/UserScript==
 
-var showInfo = document.location.href.split('/');
-var showInfoName = showInfo[4];
-var showInfoDetails = showInfo[6];
-var showInfoSeason = showInfoDetails.match(/(\d+)/g)[0].replace(/^0+/, "");
-var showInfoEpisode = showInfoDetails.match(/(\d+)/g)[1].replace(/^0+/, "");
-var showInfoEpisodeName = document.getElementsByClassName('episode-title')[0].textContent;
+
+var showInfoName = $('#top-link').find('a:nth-child(2)').text();
+var showInfoSeasonDummy = $('#top-link').find('h1').text();
+var showInfoSeason = showInfoSeasonDummy.match(/(\d+)/g)[0].replace(/^0+/, "");
+var showInfoEpisode = showInfoSeasonDummy.match(/(\d+)/g)[1].replace(/^0+/, "");
+var showInfoEpisodeName = $('.episode-title').text();
+
 var subtitlesUrl = 'http://www.addic7ed.com/serie/'+showInfoName+'/'+showInfoSeason+'/'+showInfoEpisode+'/'+showInfoEpisodeName;
 
-var subsbutton = document.createElement("a");
-subsbutton.setAttribute('class', 'btn addic7ed');
-subsbutton.setAttribute('style', 'top:24px');
-subsbutton.textContent = 'Addic7ed subs';
-subsbutton.addEventListener('click', function() { window.open(subtitlesUrl) });
-var showInfoDiv = document.getElementsByClassName('buttons')[0]
-showInfoDiv.appendChild(subsbutton);
+$('.buttons').append(
+	$('<a>').attr({
+		class: 'btn addic7ed',
+		style: 'top:24px',
+		target: '_blank'
+	}).text('Addic7ed subs').click(
+		function() { 
+			window.open(subtitlesUrl);
+			return false;
+	})
+);
