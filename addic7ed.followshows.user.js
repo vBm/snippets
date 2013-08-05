@@ -3,11 +3,11 @@
 // @namespace   followshows
 // @description Link addic7ed subs
 // @author      vBm <vbm@omertabeyond.com>
-// @require     http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1.3
-// @date        04/08/2013
+// @version     1.4
+// @date        05/08/2013
+// @grant       none
 // ==/UserScript==
 
 
@@ -27,6 +27,5 @@ $('.buttons').append(
 	}).text('Addic7ed subs').click(
 		function() { 
 			window.open(subtitlesUrl);
-			return false;
 	})
 );
