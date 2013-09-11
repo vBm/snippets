@@ -5,16 +5,16 @@
 // @author      vBm <vbm@omertabeyond.com>
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1.4
-// @date        05/08/2013
+// @version     1.5
+// @date        11/09/2013
 // @grant       none
 // ==/UserScript==
 
 
 var showInfoName = $('#top-link').find('a:nth-child(2)').text();
 var showInfoSeasonDummy = $('#top-link').find('h1').text();
-var showInfoSeason = showInfoSeasonDummy.match(/(\d+)/g)[0].replace(/^0+/, "");
-var showInfoEpisode = showInfoSeasonDummy.match(/(\d+)/g)[1].replace(/^0+/, "");
+var showInfoSeason = showInfoSeasonDummy.match(/S(\d+)/g)[0].replace(/\D/g, "").replace(/^0+/, "");
+var showInfoEpisode = showInfoSeasonDummy.match(/E(\d+)/g)[0].replace(/\D/g, "").replace(/^0+/g, "");
 var showInfoEpisodeName = $('.episode-title').text();
 
 var subtitlesUrl = 'http://www.addic7ed.com/serie/'+showInfoName+'/'+showInfoSeason+'/'+showInfoEpisode+'/'+showInfoEpisodeName;
