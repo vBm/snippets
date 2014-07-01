@@ -3,10 +3,11 @@
 // @namespace   followshows
 // @description Link addic7ed subs
 // @author      vBm <vbm@omertabeyond.com>
+// @oujs:author vBm
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1.7
-// @date        29/12/2013
+// @version     1.7.1
+// @date        01/07/2014
 // @grant       none
 // ==/UserScript==
 
