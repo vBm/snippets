@@ -2,6 +2,7 @@
 // @name        FollowShows Remaining
 // @namespace   followshows
 // @description Show a number of remaining episodes to watch
+// @icon        http://followshows.com/favicon.ico
 // @author      vBm <vbm@omertabeyond.com>
 // @oujs:author vBm
 // @include     http://followshows.com/user/*

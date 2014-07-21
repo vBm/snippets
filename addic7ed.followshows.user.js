@@ -2,6 +2,7 @@
 // @name        FollowShows Subtitles
 // @namespace   followshows
 // @description Link addic7ed subs
+// @icon        http://followshows.com/favicon.ico
 // @author      vBm <vbm@omertabeyond.com>
 // @oujs:author vBm
 // @include     http://followshows.com/show/*
