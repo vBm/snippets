@@ -6,8 +6,8 @@
 // @author      vBm <vbm@omertabeyond.com>
 // @oujs:author vBm
 // @include     http://followshows.com/user/*
-// @version     1
-// @date        20/07/2014
+// @version     2
+// @date        22/07/2014
 // @grant       none
 // ==/UserScript==
 
@@ -28,8 +28,10 @@ $.ajax({
 }).done(function(data) {
 	var totalEpisodes = [];
 	$(data).find('.stats').each(function() {
-		totalEpisodes.push($(this).text().match(/\d+/)[0])
+		totalEpisodes.push(parseInt($(this).text().match(/\d+/)[0], 10));
 	});
-	var totalEpisodesSum = eval(totalEpisodes.join('+'));
+	var totalEpisodesSum = totalEpisodes.reduce(function(a, b) {
+		return a + b;
+	});
 	$('.addic7ed').text(totalEpisodesSum);
 });
