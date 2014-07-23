@@ -26,12 +26,16 @@ $.ajax({
 	url: "http://followshows.com/home/watchlist",
 	cache: false,
 }).done(function(data) {
-	var totalEpisodes = [];
-	$(data).find('.stats').each(function() {
-		totalEpisodes.push(parseInt($(this).text().match(/\d+/)[0], 10));
-	});
-	var totalEpisodesSum = totalEpisodes.reduce(function(a, b) {
-		return a + b;
-	});
-	$('.addic7ed').text(totalEpisodesSum);
+	var totalEpisodesSum, totalEpisodes = [];
+	if ($(data).find('.stats').size() !== 0 ) {
+		$(data).find('.stats').each(function() {
+			totalEpisodes.push(parseInt($(this).text().match(/\d+/)[0], 10));
+		});
+		totalEpisodesSum = totalEpisodes.reduce(function(a, b) {
+			return a + b;
+		});
+		$('.addic7ed').text(totalEpisodesSum);
+	} else {
+		$('.addic7ed').text('N/A');
+	}
 });
