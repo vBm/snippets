@@ -5,6 +5,7 @@
 // @icon        http://followshows.com/favicon.ico
 // @author      vBm <vbm@omertabeyond.com>
 // @oujs:author vBm
+// @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/user/*
 // @version     2
 // @date        22/07/2014

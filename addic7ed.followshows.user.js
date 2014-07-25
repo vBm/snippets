@@ -5,6 +5,7 @@
 // @icon        http://followshows.com/favicon.ico
 // @author      vBm <vbm@omertabeyond.com>
 // @oujs:author vBm
+// @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
 // @version     1.7.1
@@ -12,7 +13,7 @@
 // @grant       none
 // ==/UserScript==
 
-var showInfoName = $('div#top-link a')[0].text;
+var showInfoName = $('div#top-link a')[0].text();
 var showInfoSeasonDummy = $('#top-link').find('h1').first().text();
 var showInfoSeason = showInfoSeasonDummy.match(/(\d+)/g)[0].replace(/\D/g, "").replace(/^0+/, "");
 var showInfoEpisode = showInfoSeasonDummy.match(/(\d+)/g)[1].replace(/\D/g, "").replace(/^0+/g, "");
