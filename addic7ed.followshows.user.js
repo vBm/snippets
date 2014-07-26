@@ -8,15 +8,15 @@
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1.7.1
-// @date        01/07/2014
+// @version     1.7.2
+// @date        26/07/2014
 // @grant       none
 // ==/UserScript==
 
-var showInfoName = $('div#top-link a')[0].text();
-var showInfoSeasonDummy = $('#top-link').find('h1').first().text();
-var showInfoSeason = showInfoSeasonDummy.match(/(\d+)/g)[0].replace(/\D/g, "").replace(/^0+/, "");
-var showInfoEpisode = showInfoSeasonDummy.match(/(\d+)/g)[1].replace(/\D/g, "").replace(/^0+/g, "");
+var showInfoName = $('div#top-link a').first().text();
+var showInfoSeasonDummy = $('#top-link').find('h1').first().text().match(/(\d+)/g);
+var showInfoSeason = showInfoSeasonDummy[0].replace(/\D/g, "").replace(/^0+/, "");
+var showInfoEpisode = showInfoSeasonDummy[1].replace(/\D/g, "").replace(/^0+/g, "");
 var showInfoEpisodeName = $('.episode-title').text();
 
 var subtitlesUrl = 'http://www.addic7ed.com/serie/'+showInfoName+'/'+showInfoSeason+'/'+showInfoEpisode+'/'+showInfoEpisodeName;
