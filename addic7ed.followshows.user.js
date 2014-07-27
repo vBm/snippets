@@ -15,8 +15,8 @@
 
 var showInfoName = $('div#top-link a').first().text();
 var showInfoSeasonDummy = $('#top-link').find('h1').first().text().match(/(\d+)/g);
-var showInfoSeason = showInfoSeasonDummy[0].replace(/\D/g, "").replace(/^0+/, "");
-var showInfoEpisode = showInfoSeasonDummy[1].replace(/\D/g, "").replace(/^0+/g, "");
+var showInfoSeason = showInfoSeasonDummy[0].replace(/\D/g, '').replace(/^0+/, '');
+var showInfoEpisode = showInfoSeasonDummy[1].replace(/\D/g, '').replace(/^0+/g, '');
 var showInfoEpisodeName = $('.episode-title').text();
 
 var subtitlesUrl = 'http://www.addic7ed.com/serie/'+showInfoName+'/'+showInfoSeason+'/'+showInfoEpisode+'/'+showInfoEpisodeName;
