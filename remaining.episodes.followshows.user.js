@@ -25,7 +25,7 @@ $('#stats').append(
 
 if (!$('a.btn-follow-user').attr('user')) {
 	$.ajax({
-		url: "http://followshows.com/home/watchlist",
+		url: 'http://followshows.com/home/watchlist',
 		cache: false,
 	}).done(function(data) {
 		var totalEpisodesSum, totalEpisodes = [];
