@@ -5,6 +5,7 @@
 // @icon        http://followshows.com/favicon.ico
 // @author      vBm <vbm@omertabeyond.com>
 // @oujs:author vBm
+// @license     The MIT License (MIT)
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
