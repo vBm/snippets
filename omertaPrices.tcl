@@ -2,7 +2,7 @@
 # Title      : Omerta Prices
 # Name       : omertaPrices.tcl
 # Author     : vBm ( vbm@omertabeyond.com )
-# Version    : 0.7
+# Version    : 0.8
 #########################################################
 # Information:
 #   Script has been written for sole purpose
@@ -27,10 +27,11 @@
 #                  that will give us always correct prices even if there's some errors
 #                 on page that displays 'em
 #   0.5 -    Removed obsolete beta link
-#   0.6 -    Rewritten script totaly to cope with new API
+#   0.6 -    Rewritten script totally to cope with new API
 #                 Removed all obsolete version links
 #                 added checker for http errors
 #   0.7 -    Added back .dm link
+#   0.8 -    Update links
 #
 #########################################################
 #
@@ -40,13 +41,11 @@
 package require http
 package require tdom
 
-
 # Public commands that will trigger the script.
 #
 # The prefix goes before like '!' or '.'
 
 set cmdprefix "!"
-
 
 # The suffix comes after like 'prices' or 'p'
 
@@ -60,14 +59,10 @@ bind pub - $cmdprefix$cmdsuffix show:prices
 proc show:prices { nick host hand chan arg } {
     if { $arg == "" } { set url "http://www.barafranca.com/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".com" }
     if { $arg == "com" } { set url "http://www.barafranca.com/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".com" }
-    if { $arg == "dm" } { set url "http://dm.barafranca.com/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".dm" }
+    if { $arg == "dm" } { set url "http://omerta.dm/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".dm" }
     if { $arg == "nl" } { set url "http://www.barafranca.nl/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".nl" }
-    if { $arg == "br" } { set url "http://www.barafranca.com.br/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".com.br" }
-    if { $arg == "pt" } { set url "http://www.barafranca.com.pt/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".com.pt" }
-    if { $arg == "de" } { set url "http://www.barafranca.de/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".de" }
-    if { $arg == "fr" } { set url "http://www.barafranca.fr/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".fr" }
-    if { $arg == "tr" } { set url "http://www.barafranca.gen.tr/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".gen.tr" }
-    if { $arg == "no" } { set url "http://www.barafranca.no/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".no" }
+    if { $arg == "pt" } { set url "http://omerta.pt/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".pt" }
+    if { $arg == "tr" } { set url "http://www.barafranca.gen.tr/BeO/webroot/index.php?module=API&action=smuggling_prices"; set version ".tr" }
 
     if {[catch {set tok [::http::geturl $url -timeout 10000]} msg]} {
         putlog "oops get:url error:: $msg"
