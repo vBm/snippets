@@ -8,8 +8,8 @@
 // @license     The MIT License (MIT)
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/user/*
-// @version     3
-// @date        28/07/2014
+// @version     4
+// @date        10/08/2014
 // @grant       none
 // ==/UserScript==
 
@@ -26,7 +26,7 @@ $('#stats').append(
 
 if (!$('a.btn-follow-user').attr('user')) {
 	$.ajax({
-		url: 'http://followshows.com/home/watchlist',
+		url: '//' + document.location.hostname + '/home/watchlist',
 		cache: false,
 	}).done(function(data) {
 		var totalEpisodesSum, totalEpisodes = [];
