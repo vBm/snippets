@@ -9,8 +9,8 @@
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1.7.3
-// @date        21/08/2014
+// @version     1.7.4
+// @date        22/08/2014
 // @grant       none
 // ==/UserScript==
 
@@ -21,9 +21,11 @@ var showInfoEpisode = showInfoSeasonDummy[1].replace(/\D/g, '').replace(/^0+/g, 
 var showInfoEpisodeName = $('.episode-title').text();
 
 // Silly addic7ed is not using always the same name of the shows like followshows.
-if (showInfoName == 'Legends (TNT)') {
-    showInfoName = 'Legends_(2014)';
-}
+var addic7ed = {
+	'Legends (TNT)': 'Legends_(2014)'
+};
+
+showInfoName = addic7ed[showInfoName] || showInfoName;
 
 var subtitlesUrl = 'http://www.addic7ed.com/serie/'+showInfoName+'/'+showInfoSeason+'/'+showInfoEpisode+'/'+showInfoEpisodeName;
 
