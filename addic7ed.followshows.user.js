@@ -1,4 +1,4 @@
-// ==UserScript==
+ï»¿// ==UserScript==
 // @name        FollowShows Subtitles
 // @namespace   followshows
 // @description Link addic7ed subs
@@ -9,7 +9,7 @@
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1.7.5
+// @version     1.7.5.1
 // @date        14/10/2014
 // @grant       none
 // ==/UserScript==
@@ -23,7 +23,7 @@ var showInfoEpisodeName = $('.episode-title').text();
 // Silly addic7ed is not using always the same name of the shows like followshows.
 var addic7ed = {
 	'Legends (TNT)': 'Legends_(2014)',
-	'Äkta Människor': 'Real_Humans_(Äkta_Människor)'
+	'Ã„kta MÃ¤nniskor': 'Real_Humans_(Ã„kta_MÃ¤nniskor)'
 };
 
 showInfoName = addic7ed[showInfoName] || showInfoName;
