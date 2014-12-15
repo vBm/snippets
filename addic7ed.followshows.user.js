@@ -9,8 +9,8 @@
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1.7.5.2
-// @date        08/11/2014
+// @version     1.7.5.3
+// @date        15/12/2014
 // @grant       none
 // ==/UserScript==
 
@@ -24,7 +24,8 @@ var showInfoEpisodeName = $('.episode-title').text();
 var addic7ed = {
 	'Legends (TNT)': 'Legends_(2014)',
 	'Äkta Människor': 'Real_Humans_(Äkta_Människor)',
-	'The Game (2014)': 'The Game (UK)'
+	'The Game (2014)': 'The Game (UK)',
+	'The Librarians (US)': 'The Librarians (2014)'
 };
 
 showInfoName = addic7ed[showInfoName] || showInfoName;
