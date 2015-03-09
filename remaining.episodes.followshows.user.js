@@ -8,8 +8,8 @@
 // @license     The MIT License (MIT)
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/user/*
-// @version     4.1
-// @date        01/01/2015
+// @version     4.2
+// @date        09/03/2015
 // @grant       none
 // ==/UserScript==
 
@@ -24,6 +24,14 @@ $('#stats').append(
 	)
 );
 
+function textPrep() {
+	var numbers = $('#stats').text().match(/\d+/g),
+	shows = numbers[0],
+	watched = numbers[3],
+	remain = numbers[4];
+	return 'FollowShows stats: ' + shows + ' shows || ' + watched + ' episodes watched || ' + remain + ' episodes to watch';
+}
+
 if (!$('a.btn-follow-user').attr('user')) {
 	$.ajax({
 		url: '//' + document.location.hostname + '/home/watchlist',
@@ -37,7 +45,10 @@ if (!$('a.btn-follow-user').attr('user')) {
 			totalEpisodesSum = totalEpisodes.reduce(function(a, b) {
 				return a + b;
 			});
-			$('.addic7ed').text(totalEpisodesSum);
+			$('.addic7ed').text(totalEpisodesSum).click(
+				function() {
+					prompt('Total count:', textPrep());
+				});
 		} else {
 			$('.addic7ed').text('N/A');
 		}
