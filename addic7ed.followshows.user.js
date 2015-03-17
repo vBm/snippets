@@ -9,8 +9,8 @@
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1.7.5.4
-// @date        01/01/2015
+// @version     1.7.5.5
+// @date        17/03/2015
 // @grant       none
 // ==/UserScript==
 
@@ -25,7 +25,8 @@ var addic7ed = {
 	'Legends (TNT)': 'Legends_(2014)',
 	'Äkta Människor': 'Real_Humans_(Äkta_Människor)',
 	'The Game (2014)': 'The Game (UK)',
-	'The Librarians (US)': 'The Librarians (2014)'
+	'The Librarians (US)': 'The Librarians (2014)',
+	'The Royals (2015)': 'The Royals (E)'
 };
 
 showInfoName = addic7ed[showInfoName] || showInfoName;
