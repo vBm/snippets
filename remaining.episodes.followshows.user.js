@@ -8,8 +8,8 @@
 // @license     The MIT License (MIT)
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/user/*
-// @version     4.2
-// @date        09/03/2015
+// @version     4.3
+// @date        17/03/2015
 // @grant       none
 // ==/UserScript==
 
