@@ -20,7 +20,13 @@ $('#stats').append(
 		}),
 		$('<div>').attr({
 			class: 'title'
-		}).text('EPISODES TO WATCH')
+		}).css(
+			'cursor', 'pointer'
+		).click(
+			function() {
+				prompt('Total count:', textPrep());
+			}
+		).text('EPISODES TO WATCH')
 	)
 );
 
@@ -45,10 +51,7 @@ if (!$('a.btn-follow-user').attr('user')) {
 			totalEpisodesSum = totalEpisodes.reduce(function(a, b) {
 				return a + b;
 			});
-			$('.addic7ed').text(totalEpisodesSum).click(
-				function() {
-					prompt('Total count:', textPrep());
-				});
+			$('.addic7ed').text(totalEpisodesSum);
 		} else {
 			$('.addic7ed').text('N/A');
 		}
