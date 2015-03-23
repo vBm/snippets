@@ -9,8 +9,8 @@
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1.7.5.6
-// @date        18/03/2015
+// @version     1.7.5.7
+// @date        24/03/2015
 // @grant       none
 // ==/UserScript==
 
@@ -27,7 +27,8 @@ var addic7ed = {
 	'The Game (2014)': 'The Game (UK)',
 	'The Librarians (US)': 'The Librarians (2014)',
 	'The Royals (2015)': 'The Royals (E)',
-	'Undateable (2013)': 'Undateable (2014)'
+	'Undateable (2013)': 'Undateable (2014)',
+	'Secrets & Lies (ABC)': 'Secrets and Lies'
 };
 
 showInfoName = addic7ed[showInfoName] || showInfoName;
