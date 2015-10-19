@@ -25,7 +25,8 @@ var showInfoEpisodeName = $('header h1').text();
 // Due to different names either one of pages use we have to create an array to circumvent around it.
 var addic7ed = {
 	'Legends': 'Legends_(2014)',
-	'The Flash': 'The Flash (2014)'
+	'The Flash': 'The Flash (2014)',
+	'House Of Cards': 'House_of_Cards_(2013)'
 };
 
 showInfoName = addic7ed[showInfoName] || showInfoName;
