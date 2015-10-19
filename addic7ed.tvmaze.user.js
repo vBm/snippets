@@ -26,7 +26,8 @@ var showInfoEpisodeName = $('header h1').text();
 var addic7ed = {
 	'Legends': 'Legends_(2014)',
 	'The Flash': 'The Flash (2014)',
-	'House Of Cards': 'House_of_Cards_(2013)'
+	'House Of Cards': 'House_of_Cards_(2013)',
+	'Secrets & Lies': 'Secrets and Lies'
 };
 
 showInfoName = addic7ed[showInfoName] || showInfoName;
