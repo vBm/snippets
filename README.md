@@ -2,6 +2,12 @@
 
 ***Some of scripts I've wrote for personal use but decided to share 'em.***
 
+# Addic7ed TVMaze
+
+[This userscript](addic7ed.tvmaze.user.js) has simple task of adding link to [Addic7ed](http://www.addic7ed.com/) page for desired episode on [TVMaze](http://www.tvmaze.com/).
+
+
+![Addic7ed TVmaze](img/tvmaze.png "Addic7ed TVMaze")
 
 # Addic7ed Followshows
 
