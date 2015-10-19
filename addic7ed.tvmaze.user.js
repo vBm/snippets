@@ -8,8 +8,8 @@
 // @license     The MIT License (MIT)
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://www.tvmaze.com/episodes/*
-// @version     0.1
-// @date        08/10/2015
+// @version     0.1.1
+// @date        19/10/2015
 // @grant       none
 // ==/UserScript==
 
