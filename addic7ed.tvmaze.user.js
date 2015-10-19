@@ -25,7 +25,7 @@ var showInfoEpisodeName = $('header h1').text();
 // Due to different names either one of pages use we have to create an array to circumvent around it.
 var addic7ed = {
 	'Legends': 'Legends_(2014)',
-    'The Flash': 'The Flash (2014)'
+	'The Flash': 'The Flash (2014)'
 };
 
 showInfoName = addic7ed[showInfoName] || showInfoName;
@@ -35,10 +35,10 @@ console.log(subtitlesUrl);
 
 $('#main-img').append(
 	$('<a>').attr({
-        id: 'watching',
+		id: 'watching',
 		class: 'radius small button secondary addic7ed',
 		target: '_blank',
-        style: 'margin-top: 3px'
+		style: 'margin-top: 3px'
 	}).text(' Addic7ed subs').click(
 		function() {
 			window.open(subtitlesUrl);
