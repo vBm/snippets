@@ -9,8 +9,8 @@
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://followshows.com/show/*
 // @include     http://www.followshows.com/show/*
-// @version     1.7.5.8
-// @date        30/03/2015
+// @version     1.7.5.9
+// @date        06/11/2015
 // @grant       none
 // ==/UserScript==
 
@@ -29,7 +29,8 @@ var addic7ed = {
 	'The Royals (2015)': 'The Royals (E)',
 	'Undateable (2013)': 'Undateable (2014)',
 	'Secrets & Lies (ABC)': 'Secrets and Lies',
-	'House of Cards (2012)': 'House of Cards (2013)'
+	'House of Cards (2012)': 'House of Cards (2013)',
+	'Ash vs Evil Dead': 'Ash vs. Evil Dead'
 };
 
 showInfoName = addic7ed[showInfoName] || showInfoName;

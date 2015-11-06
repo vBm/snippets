@@ -8,8 +8,8 @@
 // @license     The MIT License (MIT)
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://www.tvmaze.com/episodes/*
-// @version     0.1.1
-// @date        19/10/2015
+// @version     0.1.2
+// @date        06/11/2015
 // @grant       none
 // ==/UserScript==
 
@@ -27,7 +27,8 @@ var addic7ed = {
 	'Legends': 'Legends_(2014)',
 	'The Flash': 'The Flash (2014)',
 	'House Of Cards': 'House_of_Cards_(2013)',
-	'Secrets & Lies': 'Secrets and Lies'
+	'Secrets & Lies': 'Secrets and Lies',
+	'Ash vs Evil Dead': 'Ash vs. Evil Dead'
 };
 
 showInfoName = addic7ed[showInfoName] || showInfoName;
