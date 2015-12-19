@@ -8,12 +8,12 @@
 // @license     The MIT License (MIT)
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://www.tvmaze.com/episodes/*
-// @version     0.1.2
-// @date        06/11/2015
+// @version     0.2
+// @date        19/12/2015
 // @grant       none
 // ==/UserScript==
 
-var showInfoName = $('div#general-info-panel').find('p').first().find('a').text();
+var showInfoName = $('div#general-info-panel').find('p').first().find('a').first().text();
 
 var showInfoRegex = /Number\:.*(\d+).*\n\s+Episode.(\d+)/g;
 var match = showInfoRegex.exec($('div#general-info-panel p')[0].innerHTML);
