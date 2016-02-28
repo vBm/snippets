@@ -2,6 +2,12 @@
 
 ***Some of scripts I've wrote for personal use but decided to share 'em.***
 
+# TVMaze Episode Counter
+
+[This userscript](counter.tvmaze.user.js) has simple task of showing remaining episodes count to finish all of the shows on the [watchlist](http://www.tvmaze.com/watchlist).
+
+![Counter TVmaze](img/tvmaze.counter.png "TVMaze Counter")
+
 # Mark ended shows on TVMaze
 
 [This userscript](ended.tvmaze.user.js) has simple task of adding _*_ to [watchlist](http://www.tvmaze.com/watchlist) page for shows that have ended but you haven't watched 'em yet.
