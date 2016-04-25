@@ -8,13 +8,12 @@
 // @license     The MIT License (MIT)
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://www.tvmaze.com/watchlist*
-// @version     0.1
-// @date        29/02/2016
+// @version     0.2
+// @date        25/04/2016
 // @grant       none
 // ==/UserScript==
 
 var totalEpisodesSum, totalEpisodes = [];
-var totalShows = $('.watched-eps').length + 1;
 
 $('.watched-eps').each(function() {
 	totalEpisodes.push(
@@ -30,10 +29,18 @@ totalEpisodesSum = totalEpisodes.reduce(function (a, b) {
 	return a + b;
 });
 
+localStorage.setItem('totalEps', totalEpisodesSum);
+
 $('#filter.row').append(
 	$('<div>').append(
 		$('<span>').attr({
-			class: 'center large3 column'
-		}).text('Remaining episodes to watch: ' + totalEpisodesSum + ' from ' + totalShows + ' shows')
+			class: 'center large3 column',
+			id: 'remaining'
+		}).text('Remaining episodes to watch: ' + localStorage.totalEps + ' from ' + ($('.watched-eps').length + 1) + ' shows')
 	)
 );
+
+$(document).on('click', '.markwatched', function() {
+	localStorage.setItem('totalEps', (localStorage.totalEps - 1));
+	$('#remaining').text('Remaining episodes to watch: ' + localStorage.totalEps + ' from ' + ($('.watched-eps').length + 1) + ' shows');
+});
