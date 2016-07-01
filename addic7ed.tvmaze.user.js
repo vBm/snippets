@@ -8,8 +8,8 @@
 // @license     The MIT License (MIT)
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://www.tvmaze.com/episodes/*
-// @version     0.2
-// @date        19/12/2015
+// @version     0.3
+// @date        02/07/2016
 // @grant       none
 // ==/UserScript==
 
@@ -39,13 +39,17 @@ console.log(subtitlesUrl);
 $('#main-img').append(
 	$('<a>').attr({
 		id: 'watching',
-		class: 'radius small button secondary addic7ed',
+		class: 'radius small button secondary addic7ed js-needlogin',
 		target: '_blank',
-		style: 'margin-top: 3px'
+	}).css({
+		float: 'right',
+		width: '100%',
+		marginTop: '3px'
 	}).text(' Addic7ed subs').click(
 		function() {
 			window.open(subtitlesUrl);
-	})
+		}
+	)
 );
 
 $('<i class="fa fa-download"></i>').prependTo('.addic7ed');
