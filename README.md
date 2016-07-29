@@ -2,6 +2,12 @@
 
 ***Some of scripts I've wrote for personal use but decided to share 'em.***
 
+# TVMaze -> RARBG
+
+[This userscript](rarbg.tvmaze.user.js) has a simple task of adding 'rarbg' button on shows page that will open a new tab which will lead to that show on rarbg.
+
+![RARBG TVmaze](img/tvmaze.rarbg.png "TVMaze -> RARBG bridge")
+
 # TVMaze Episode Counter
 
 [This userscript](counter.tvmaze.user.js) has simple task of showing remaining episodes count to finish all of the shows on the [watchlist](http://www.tvmaze.com/watchlist).
