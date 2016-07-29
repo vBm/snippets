@@ -8,8 +8,8 @@
 // @license     The MIT License (MIT)
 // @supportURL  https://github.com/vBm/snippets/issues
 // @include     http://www.tvmaze.com/watchlist*
-// @version     0.2
-// @date        25/04/2016
+// @version     0.3
+// @date        29/07/2016
 // @grant       none
 // ==/UserScript==
 
@@ -36,11 +36,13 @@ $('#filter.row').append(
 		$('<span>').attr({
 			class: 'center large3 column',
 			id: 'remaining'
-		}).text('Remaining episodes to watch: ' + localStorage.totalEps + ' from ' + ($('.watched-eps').length + 1) + ' shows')
+		}).text(`Remaining episodes to watch: ${localStorage.totalEps} from ${$('.watched-eps').length} shows`)
 	)
 );
 
-$(document).on('click', '.markwatched', function() {
-	localStorage.setItem('totalEps', (localStorage.totalEps - 1));
-	$('#remaining').text('Remaining episodes to watch: ' + localStorage.totalEps + ' from ' + ($('.watched-eps').length + 1) + ' shows');
+$('.watch-dropdown').change(function(){
+	if ($(this).val() === '0') {
+		localStorage.setItem('totalEps', (localStorage.totalEps - 1));
+		$('#remaining').text(`Remaining episodes to watch: ${localStorage.totalEps} from ${$('.watched-eps').length} shows`);
+	}
 });
