@@ -5,31 +5,29 @@
 # Version    : 0.8
 #########################################################
 # Information:
-#   Script has been written for sole purpose
-#   of using it at #beyond at Omerta Network.
-#   Some of bugs are prolly present, I'll do
-#   my best to solve those problems ASAP.
+#   Script has been written for sole purpose of using it at #beyond at Omerta Network.
+#   Some of bugs are prolly present, I'll do my best to solve those problems ASAP.
 #
 #   At the moment only cocaine prices are shown.
 #
 # Usage      :
-#   Usage is rather simple. All you need to do
-#   is to define public commands you want to
-#   use at your channel.
+#   Usage is rather simple.
+#   All you need to do is to define public commands you want to use at your channel.
+#
 #########################################################
 #
 # Versions   :
 #   0.1 -    Initial Release
-#   0.2 -    Change GMT Offset regardless of timezone
-#                 where shell from which this script runs is.
+#   0.2 -    Change GMT Offset regardless of timezone where shell
+#            from which this script runs is.
 #   0.3 -    Added v3 beta prices
 #   0.4 -    Instead of using 'split $prices "\n"' i'm gonna use regexp now
-#                  that will give us always correct prices even if there's some errors
-#                 on page that displays 'em
+#            that will give us always correct prices even if there's some errors
+#            on page that displays 'em
 #   0.5 -    Removed obsolete beta link
 #   0.6 -    Rewritten script totally to cope with new API
-#                 Removed all obsolete version links
-#                 added checker for http errors
+#             - Removed all obsolete version links
+#             - Added checker for http errors
 #   0.7 -    Added back .dm link
 #   0.8 -    Update links
 #
@@ -41,8 +39,7 @@
 package require http
 package require tdom
 
-# Public commands that will trigger the script.
-#
+# Public command that will trigger the script.
 # The prefix goes before like '!' or '.'
 
 set cmdprefix "!"
