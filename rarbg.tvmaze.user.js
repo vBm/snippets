@@ -1,16 +1,19 @@
 // ==UserScript==
-// @name        TVMaze RARBG
-// @namespace   tvmaze
-// @description add rarbg link to tvmaze show page
-// @icon        http://tvmazecdn.com/images/favico/favicon.ico
-// @author      vBm <vbm@omertabeyond.com>
-// @oujs:author vBm
-// @license     The MIT License (MIT)
-// @supportURL  https://github.com/vBm/snippets/issues
-// @include     http://www.tvmaze.com/shows/*
-// @version     0.4
-// @date        29/07/2016
-// @grant       none
+// @name                TVMaze RARBG
+// @namespace           tvmaze
+// @description         Add RARBG link to TVMaze show page
+// @icon                https://tvmazecdn.com/images/favico/favicon.ico
+// @author              vBm <vbm@omertabeyond.com>
+// @oujs:author         vBm
+// @license             The MIT License (MIT)
+// @contributionURL     https://www.paypal.me/thevbm/3
+// @contributionAmount  €3.00
+// @supportURL          https://github.com/vBm/snippets/issues
+// @include             http://www.tvmaze.com/shows/*
+// @include             https://www.tvmaze.com/shows/*
+// @version             0.5
+// @date                17/01/2017
+// @grant               none
 // ==/UserScript==
 
 $.getJSON(
