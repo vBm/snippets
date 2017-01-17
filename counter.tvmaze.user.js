@@ -1,33 +1,30 @@
 // ==UserScript==
-// @name        TVMaze Counter
-// @namespace   tvmaze
-// @description Display how many episodes are left to watch
-// @icon        http://tvmazecdn.com/images/favico/favicon.ico
-// @author      vBm <vbm@omertabeyond.com>
-// @oujs:author vBm
-// @license     The MIT License (MIT)
-// @supportURL  https://github.com/vBm/snippets/issues
-// @include     http://www.tvmaze.com/watchlist*
-// @version     0.3
-// @date        29/07/2016
-// @grant       none
+// @name                TVMaze Counter
+// @namespace           tvmaze
+// @description         Display how many episodes are left to watch
+// @icon                https://tvmazecdn.com/images/favico/favicon.ico
+// @author              vBm <vbm@omertabeyond.com>
+// @oujs:author         vBm
+// @license             The MIT License (MIT)
+// @contributionURL     https://www.paypal.me/thevbm/3
+// @contributionAmount  €3.00
+// @supportURL          https://github.com/vBm/snippets/issues
+// @include             http://www.tvmaze.com/watchlist*
+// @include             https://www.tvmaze.com/watchlist*
+// @version             0.4
+// @date                17/01/2017
+// @grant               none
 // ==/UserScript==
 
 var totalEpisodesSum, totalEpisodes = [];
 
 $('.watched-eps').each(function() {
 	totalEpisodes.push(
-		$(this).text().trim().split('/').map(function (el) {
-			return +el;
-		}).reverse().reduce(function (a, b) {
-			return a - b;
-		})
+		$(this).text().trim().split('/').map(el => +el).reverse().reduce((a, b) => a - b)
 	);
 });
 
-totalEpisodesSum = totalEpisodes.reduce(function (a, b) {
-	return a + b;
-});
+totalEpisodesSum = totalEpisodes.reduce((a, b) => a + b);
 
 localStorage.setItem('totalEps', totalEpisodesSum);
 
