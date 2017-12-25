@@ -11,8 +11,8 @@
 // @supportURL          https://github.com/vBm/snippets/issues
 // @include             http://www.tvmaze.com/watchlist*
 // @include             https://www.tvmaze.com/watchlist*
-// @version             0.4
-// @date                17/01/2017
+// @version             0.5
+// @date                25/12/2017
 // @grant               none
 // ==/UserScript==
 
@@ -28,10 +28,10 @@ totalEpisodesSum = totalEpisodes.reduce((a, b) => a + b);
 
 localStorage.setItem('totalEps', totalEpisodesSum);
 
-$('#filter.row').append(
+$('#filter').append(
 	$('<div>').append(
 		$('<span>').attr({
-			class: 'center large3 column',
+			class: 'grid-x grid-margin-x align-center',
 			id: 'remaining'
 		}).text(`Remaining episodes to watch: ${localStorage.totalEps} from ${$('.watched-eps').length} shows`)
 	)
