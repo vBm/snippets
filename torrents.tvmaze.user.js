@@ -11,7 +11,7 @@
 // @supportURL          https://github.com/vBm/snippets/issues
 // @match               http://www.tvmaze.com/shows/*
 // @match               https://www.tvmaze.com/shows/*
-// @version             0.9.0
+// @version             1.0.0
 // @date                09/24/2022
 // @grant               none
 // ==/UserScript==
@@ -42,6 +42,17 @@ async function getShows() {
             }).text(' TL ').click(
                 () => {
                     window.open(`https://www.torrentleech.org/torrents/browse/index/imdbID/${data.externals.imdb}/`);
+                }
+            ).prepend(
+                $('<i class="fa fa-arrow-circle-down"></i>')
+            )
+        ).append(
+            $('<span>').attr({
+                class: 'torrent',
+                target: '_blank',
+            }).text(' BTN ').click(
+                () => {
+                    window.open(`https://broadcasthe.net/torrents.php?action=advanced&imdb=${data.externals.imdb}/`);
                 }
             ).prepend(
                 $('<i class="fa fa-arrow-circle-down"></i>')
