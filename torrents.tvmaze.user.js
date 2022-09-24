@@ -11,7 +11,7 @@
 // @supportURL          https://github.com/vBm/snippets/issues
 // @match               http://www.tvmaze.com/shows/*
 // @match               https://www.tvmaze.com/shows/*
-// @version             0.8.0
+// @version             0.9.0
 // @date                09/24/2022
 // @grant               none
 // ==/UserScript==
@@ -35,8 +35,19 @@ async function getShows() {
             ).prepend(
                 $('<i class="fa fa-arrow-circle-down"></i>')
             )
+        ).append(
+            $('<span>').attr({
+                class: 'torrent',
+                target: '_blank',
+            }).text(' TL ').click(
+                () => {
+                    window.open(`https://www.torrentleech.org/torrents/browse/index/imdbID/${data.externals.imdb}/`);
+                }
+            ).prepend(
+                $('<i class="fa fa-arrow-circle-down"></i>')
+            )
         )
-	);
+    );
 
     $('.torrent').css({
         display: 'inline-block',
