@@ -9,28 +9,48 @@
 // @contributionURL     https://www.paypal.me/thevbm/3
 // @contributionAmount  €3.00
 // @supportURL          https://github.com/vBm/snippets/issues
-// @include             http://www.tvmaze.com/watchlist*
-// @include             https://www.tvmaze.com/watchlist*
-// @version             0.3
-// @date                28/02/2021
+// @match               http://www.tvmaze.com/watchlist*
+// @match               https://www.tvmaze.com/watchlist*
+// @version             0.6
 // @grant               none
 // ==/UserScript==
 
-$.ajax({
-    url: `//${$(location).attr('hostname')}/showstatus`,
-    cache: false,
-}).done(function(data) {
-    var showNames = [];
-    if ($(data).find('[data-title^=Status]').length !== 0 ) {
-        $(data).find('[data-title^=Status]').each(function() {
-            if ($(this).text() === 'Ended') {
-                showNames.push($(this).parent().find('[data-title^=Show]').text());
-            }
-        });
-        $('H2').each(function() {
-            if ($.inArray($(this).text(), showNames) > -1 ) {
-                $(this).html(`* ${$(this).html()}`);
-            }
-        });
+(async () => {
+    try {
+        const response = await fetch('/showstatus', { cache: 'no-store' });
+        const data = await response.text();
+        const parser = new DOMParser();
+        const html = parser.parseFromString(data, 'text/html');
+
+
+        const ended = [];
+        const tbd = [];
+
+        const statusElements = Array.from(html.querySelectorAll('[data-title^=Status]'));
+
+        if (statusElements.length !== 0) {
+            statusElements.forEach(statusElement => {
+                const showTitleElement = statusElement.parentElement.querySelector('[data-title^=Show]');
+                const showTitle = showTitleElement.textContent;
+
+                if (statusElement.textContent === 'Ended') {
+                    ended.push(showTitle);
+                } else if (statusElement.textContent === 'To Be Determined') {
+                    tbd.push(showTitle);
+                }
+            });
+
+            Array.from(document.querySelectorAll('H2')).forEach(titleElement => {
+                const titleText = titleElement.textContent;
+
+                if (ended.includes(titleText)) {
+                    titleElement.innerHTML = `* ${titleElement.innerHTML}`;
+                } else if (tbd.includes(titleText)) {
+                    titleElement.innerHTML = `?!? ${titleElement.innerHTML}`;
+                }
+            });
+        }
+    } catch (error) {
+        console.error('Error fetching show status:', error);
     }
-});
+})();
