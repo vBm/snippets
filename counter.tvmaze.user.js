@@ -5,7 +5,7 @@
 // @icon                https://tvmazecdn.com/images/favico/favicon.ico
 // @author              vBm <the.vbm@gmail.com>
 // @oujs:author         vBm
-// @license             The MIT License (MIT)
+// @license             MIT
 // @contributionURL     https://www.paypal.me/thevbm/3
 // @contributionAmount  €3.00
 // @supportURL          https://github.com/vBm/snippets/issues

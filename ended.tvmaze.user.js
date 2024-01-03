@@ -5,13 +5,14 @@
 // @icon                https://tvmazecdn.com/images/favico/favicon.ico
 // @author              vBm <the.vbm@gmail.com>
 // @oujs:author         vBm
-// @license             The MIT License (MIT)
+// @license             MIT
 // @contributionURL     https://www.paypal.me/thevbm/3
 // @contributionAmount  €3.00
 // @supportURL          https://github.com/vBm/snippets/issues
 // @match               http://www.tvmaze.com/watchlist*
 // @match               https://www.tvmaze.com/watchlist*
 // @version             0.6
+// @date                01/01/2024
 // @grant               none
 // ==/UserScript==
 
